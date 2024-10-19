@@ -1,0 +1,66 @@
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 170px;
+}
+
+.tab {
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  color: #00203f;
+  position: relative;
+  font-weight: bold;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #00203f;
+}
+
+.tab:hover {
+  color: #00203f;
+}
+
+.tab:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #00203f;
+}
+
+.specifications {
+  width: 80%;
+  margin: 20px auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table td:first-child {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  width: 30%;
+}

@@ -1,0 +1,75 @@
+import React, { useContext } from 'react'
+import './CartItems.css'
+
+import remove_icon from '../Assets/cart_cross_icon.png'
+import { ShopContext } from '../../Context/ShopContext'
+
+
+const CartItems = () => {
+
+  const {getTotalAmount, all_product, cartItems, removeFromCart, addToCart } = useContext(ShopContext)
+
+  return (
+    <div className='cartitems'>
+      <h2>Thông tin sản phẩm</h2>
+      <div className="cartitems-format-main">
+        <p>Sản phẩm</p>
+        <p>Tên</p>
+        <p>Giá</p>
+        <p>Số lượng</p>
+        <p>Tổng tiền</p>
+        <p>Thêm</p>
+        <p>Xóa</p>
+      </div>
+      <hr />
+      {all_product.map((e) => {
+        if (cartItems[e.id] > 0) {
+          return <div>
+            <div className="cartitems-format cartitems-format-main">
+              <img src={e.image} alt="" className='carticon-product-icon' />
+              <p>{e.name}</p>
+              <p>{e.new_price}</p>
+              <button className='cartitems-quantity'>{cartItems[e.id]}</button>
+              <p>{e.new_price * cartItems[e.id]}</p>
+              <p onClick={() => { addToCart(e.id) }}><i className="fa-solid fa-plus"></i></p>
+              <img className='carticon-remove-icon' src={remove_icon} alt="" onClick={() => { removeFromCart(e.id) }} />
+            </div>
+            <hr />
+          </div>
+        }
+        return null;
+      })}
+      <div className="cartitems-down">
+        <div className="cartitems-total">
+          <h1>Tổng</h1>
+          <div>
+            <div className="cartitems-total-item">
+              <p>Subtatal</p>
+              <p>${getTotalAmount()}</p>
+            </div>
+            <hr />
+            <div className="cartitems-total-item">
+              <p>Shipping Free</p>
+              <p>Free</p>
+            </div>
+            <div className="cartitems-total-item">
+              <p>Total</p>
+              <p>${getTotalAmount()}</p>
+            </div>
+          </div>
+          <button>Thanh toán</button>
+        </div>
+        <div className="cartitems-promocode">
+          <p>Nếu bạn có mã giảm giá, nhập vào đây</p>
+          <div className="cartitems-promobox">
+            <input type="text" />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default CartItems
