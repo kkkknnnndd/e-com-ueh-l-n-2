@@ -4,15 +4,17 @@ import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
 import { ShopContext } from '../../Context/ShopContext';
 
+
 const ProductDisplay = (props) => {
 
-    const { product } = props;
-    const { addToCart, url } = useContext(ShopContext);
+
+  const { product } = props;
+  const { addToCart, url } = useContext(ShopContext);
   return (
     <div className='productdisplay'>
       <div className="productdisplay-left">
         <div className="productdisplay-img">
-            <img className='productdisplay-main-img' src={url+"/images/"+ product.image} alt="" />
+          <img className='productdisplay-main-img' src={url + "/images/" + product.image} alt="" />
         </div>
         <div className="productdisplay-img-list">
           <img src={product.image} alt="" />
@@ -57,15 +59,26 @@ const ProductDisplay = (props) => {
                 <button id="decrement">-</button>
               </div>
             </div>
-            <button className="add-to-cart" onClick={()=>{addToCart(product.id)}}>THÊM GIỎ HÀNG</button>
+            <button
+              className="add-to-cart"
+              onClick={() => { addToCart(product.id); }}
+              style={{
+                padding: window.innerWidth < 480 ? '5px 15px' : window.innerWidth < 768 ? '10px 20px' : '10px 25px',
+                fontSize: window.innerWidth < 480 ? '14px' : window.innerWidth < 768 ? '16px' : '15px',
+              }}
+            >
+              THÊM GIỎ HÀNG
+            </button>
             <div className="heart">
-                <i className="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
   )
+
 }
+
 
 export default ProductDisplay

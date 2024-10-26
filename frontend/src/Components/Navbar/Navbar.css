@@ -154,6 +154,214 @@
 .nav-profile-dropdown li img {
   width: 20px;
 }
+/* Mobile layout */
+@media (max-width: 768px) {
+  .navbar1 {
+    margin: 0 10px; /* Giảm lề */
+    padding: 8px 0; /* Giảm padding */
+    font-size: 14px; /* Giảm kích thước font trong navbar1 */
+  }
+
+  .navbar1 img {
+    width: 40px; /* Điều chỉnh kích thước hình ảnh trong navbar1 */
+    height: auto; /* Đảm bảo tỉ lệ hình ảnh */
+  }
+
+  .navbar1-contact {
+    gap: 15px; /* Giảm khoảng cách giữa các mục liên hệ */
+  }
+
+  .navbar2 {
+    padding: 8px 5%; /* Giảm padding */
+    font-size: 14px; /* Giảm kích thước font trong navbar2 */
+    display: flex; /* Đảm bảo navbar2 sử dụng flexbox */
+    justify-content: space-between; /* Căn giữa các mục */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+  }
+
+  .nav-menu {
+    margin-right: 10px; /* Giảm margin bên phải */
+    gap: 15px; /* Giảm khoảng cách giữa các mục menu */
+  }
+
+  .nav-menu li {
+    font-size: 14px; /* Giảm kích thước font */
+    padding: 5px 0; /* Giảm padding cho mục menu */
+  }
+
+  .nav-icon {
+    display: flex; /* Đảm bảo hiển thị các biểu tượng */
+    gap: 5px; /* Giảm khoảng cách giữa các biểu tượng */
+    align-items: center; /* Căn giữa các biểu tượng */
+  }
+
+  .nav-icon img {
+    width: 24px; /* Giảm kích thước biểu tượng */
+    height: 24px; /* Đảm bảo kích thước hình ảnh */
+    margin: 0; /* Xóa margin để đảm bảo không bị tràn */
+  }
+
+  .nav-count1, .nav-count2 {
+    width: 14px; /* Điều chỉnh kích thước số đếm */
+    height: 14px; /* Điều chỉnh kích thước số đếm */
+    font-size: 12px; /* Giảm kích thước font số đếm */
+    margin-left: -10px; /* Đặt lại vị trí số đếm để gần biểu tượng hơn */
+  }
+
+  .navbar-profile {
+    margin-top: 5px; /* Giảm khoảng cách giữa các phần tử */
+  }
+
+  .nav-profile-dropdown {
+    width: 100px; /* Đảm bảo dropdown nhỏ hơn */
+  }
+
+  .nav-profile-dropdown li {
+    font-size: 12px; /* Giảm kích thước font trong dropdown */
+  }
+}
+/* Navbar cho thiết bị di động */
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.navbar1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px; /* Giảm khoảng cách cho màn hình nhỏ */
+  padding: 10px 0;
+}
+
+.navbar1 img {
+  display: inline-block;
+  width: 30px; /* Kích thước nhỏ lại cho biểu tượng */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh */
+}
+
+.navbar1-contact {
+  display: flex;
+  gap: 15px; /* Giảm khoảng cách giữa các biểu tượng */
+}
+
+.navbar1-contact img {
+  margin-right: 8px; /* Điều chỉnh khoảng cách */
+  width: 18px; /* Kích thước icon nhỏ lại */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh */
+}
+
+.navbar1-3 img {
+  margin-right: 8px; /* Điều chỉnh khoảng cách */
+  width: 18px; /* Kích thước icon nhỏ lại */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh */
+}
+
+.navbar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 5%; /* Giảm padding cho màn hình nhỏ */
+  border-top: 1px solid #DEE2E6;
+}
+
+.nav-tong {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  font-weight: 700;
+  margin-right: 10px; /* Giảm khoảng cách cho màn hình nhỏ */
+  gap: 10px; /* Giảm khoảng cách giữa các mục menu */
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav-menu li:hover {
+  color: #D37235;
+  cursor: pointer;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu mượt */
+}
+
+.nav-menu .active {
+  padding-bottom: 2px;
+  border-bottom: 3px solid #D37235;
+}
+
+.nav-icon {
+  display: flex; /* Đảm bảo hiển thị các biểu tượng */
+  gap: 10px; /* Giảm khoảng cách giữa các biểu tượng */
+  align-items: center; /* Căn giữa các biểu tượng */
+}
+
+.nav-icon img {
+  width: 20px; /* Kích thước biểu tượng giỏ hàng */
+  height: 20px; /* Kích thước biểu tượng giỏ hàng */
+}
+
+.nav-icon .nav-count1,
+.nav-icon .nav-count2 {
+  width: 14px; /* Điều chỉnh kích thước số đếm */
+  height: 14px; /* Điều chỉnh kích thước số đếm */
+  font-size: 10px; /* Giảm kích thước font số đếm */
+  position: absolute; /* Đặt vị trí số đếm */
+  top: -5px; /* Điều chỉnh vị trí số đếm để nằm trên biểu tượng */
+  right: -5px; /* Điều chỉnh vị trí số đếm */
+}
+
+
+.navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute; 
+  display: none;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100px; /* Điều chỉnh kích thước dropdown cho nhỏ hơn */
+  background-color: #fff2ef;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #D67B42;
+  outline: 2px solid white;
+  list-style: none;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px; /* Giảm kích thước font trong dropdown */
+  font-weight: 600;
+}
+
+.nav-profile-dropdown li img {
+  width: 16px; /* Kích thước icon trong dropdown */
+}
+
 
 /* display: flex;
   justify-content: center;

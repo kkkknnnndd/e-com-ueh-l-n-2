@@ -24,3 +24,24 @@
   display: flex;
   gap: 30px;
 }
+@media (max-width: 768px) {
+  .relatedproducts {
+    height: auto;
+    padding: 0 20px;
+  }
+
+  .relatedproducts h1 {
+    font-size: 32px;
+  }
+
+  .relatedproducts hr {
+    width: 150px;
+    height: 4px;
+  }
+
+  .relatedproducts-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

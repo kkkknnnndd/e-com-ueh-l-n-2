@@ -8,3 +8,10 @@
   margin: 8px 170px;
   text-transform: capitalize;
 }
+@media (max-width: 768px) {
+  .breadcrum {
+    margin: 8px 30px;
+    font-size: 12px;
+    gap: 5px;
+  }
+}
